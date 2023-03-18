@@ -58,13 +58,13 @@ jobs:
     name: A job to deploy blog.
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v3
       with:
         submodules: true # Checkout private submodules(themes or something else).
     
     # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)
     - name: Cache node modules
-      uses: actions/cache@v1
+      uses: actions/cache@v3
       id: cache
       with:
         path: node_modules
@@ -78,7 +78,7 @@ jobs:
     # Deploy hexo blog website.
     - name: Deploy
       id: deploy
-      uses: sma11black/hexo-action@v1.0.3
+      uses: kdplus/hexo-action@v1.0.5
       with:
         deploy_key: ${{ secrets.DEPLOY_KEY }}
         user_name: your github username  # (or delete this input setting to use bot account)
