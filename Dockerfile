@@ -1,6 +1,6 @@
-FROM node:16-bullseye-slim
+FROM node:19-bullseye-slim
 
-LABEL version="1.0.4"
+LABEL version="1.0.5"
 LABEL repository="https://github.com/sma11black/hexo-action"
 LABEL homepage="https://sma11black.github.io"
 LABEL maintainer="sma11black <smallblack@outlook.com>"
